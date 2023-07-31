@@ -1,0 +1,11 @@
+decord
+ffmpeg_python
+hydra-core
+numpy
+opencv_python
+Pillow
+scipy
+torch
+torchaudio
+torchvision
+tqdm
