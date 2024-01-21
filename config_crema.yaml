@@ -3,19 +3,20 @@
 #####################
 
 # /path/to/crema_script.pt
-checkpoint: /path/to/crema_script.pt
+checkpoint: /home/kartik/new_diffused_heads/diffused-heads/checkpoints/crema_script.pt
 
 # /path/to/audio_encoder.pt
-encoder_checkpoint: /path/to/audio_encoder.pt
+encoder_checkpoint: /home/kartik/new_diffused_heads/diffused-heads/checkpoints/audio_encoder.pt
 
 # /path/to/id_frame - can be .mp4 or an image
-id_frame: /path/to/id_frame.mp4
+id_frame: /home/kartik/new_diffused_heads/diffused-heads/crema_test/test
 
 # /path/to/audio - can be anything supported by torchaudio (e.g. .wav, .mp3, .mp4)
-audio: /path/to/audio.wav
+audio: /home/kartik/new_diffused_heads/diffused-heads/crema_audio/audio
 
 # /path/to/output_video.mp4
-output: /path/to/output_video.mp4
+output: /home/kartik/new_diffused_heads/diffused-heads/crema_video/video
+
 
 # use GPU - highly recommended
 gpu: true
