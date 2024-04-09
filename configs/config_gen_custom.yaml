@@ -1,0 +1,13 @@
+id_frame_from_video: False # specify if you want to take the id frame from image or video
+img_resize: 128
+n_sample_timesteps: 100
+stabilize: false
+segment_len: 15
+
+checkpoint: /path/to/checkpoint.ckpt
+log_dir: /path/to/log/folder
+
+id_frame_dir: /path/to/id_image.png
+video_dir: /path/to/video.mp4
+audio_dir: /path/to/audio.wav
+audio_emb_dir: /path/to/audio_emb.pth

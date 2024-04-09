@@ -130,7 +130,4 @@ dmypy.json
 
 
 outputs/
-results/
-data/
-checkpoints/
 .tmp/

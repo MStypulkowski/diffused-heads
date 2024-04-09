@@ -1,0 +1,16 @@
+data_dir: /path/to/folder/with/data # CREMA, LRW_full_size, avspeech, vox
+audio_emb_dir: /path/to/folder/with/audio_embs # crema_audio_embs, lrw_audio_embs, avspeech_audio_embs, vox_audio_embs
+identity_frame: first # random or first
+
+checkpoint: /path/to/checkpoint.ckpt
+n_nodes: 1
+n_workers: 4
+bsz: 10
+n_batches: 1 # -1 for entire test set
+n_sample_timesteps: 200
+frame_limit: 100
+
+log_dir: /path/to/log/folder
+log_to_wandb: true
+keep_files: true
+check_for_existing_samples: false

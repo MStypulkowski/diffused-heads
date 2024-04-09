@@ -1,0 +1,48 @@
+# data
+data_dir: /path/to/folder/with/data # CREMA, LRW_full_size, avspeech, vox
+audio_emb_dir: /path/to/folder/with/audio_embs # crema_audio_embs, lrw_audio_embs, avspeech_audio_embs, vox_audio_embs
+identity_frame: random # random or first
+n_test_actors: 8
+img_resize: 128
+n_motion_frames: 2 # additional conditioning frames to preserve motion
+n_audio_motion_embs: 2 # number of additional audio embeddings before and after the current frame
+grayscale_motion: true
+motion_blur: false
+
+# diffusion
+n_timesteps: 1000 # 1000
+
+# UNet
+model_channels: 256
+out_channels: 6 # 3 or 6 if sigma learnable
+num_res_blocks: 2
+attention_resolutions: [32] # where to add attention layers
+dropout: 0.1
+channel_mult: [1, 2, 3]
+num_heads: 4
+num_head_channels: 64 # -1 for model_channels
+resblock_updown: True
+id_condition_type: frame # frame, post_gn, pre_gn
+audio_condition_type: double_pre_gn # pre_gn, post_gn, double_pre_gn, attention
+
+# training
+# null checkpoint for a new training
+checkpoint: null
+precision: 32
+n_nodes: 1
+n_workers: 4
+bsz: 10
+n_epochs: 5000 # remember to change scheduler!!! 112 - 6 LRW, 168 - 9 vox, 84 - 5 avspeech, 3000 - 166 CREMA
+lr: 5e-5
+swa_lr: null # 1e-6
+swa_epoch_start: 800
+vlb_weight: 1e-4
+lip_weight: 0.2
+
+# sampling
+val_every_n_epochs: 5000
+n_frames_per_sample: 4
+log_dir: /path/to/log/folder
+
+# debug mode
+debug: false
