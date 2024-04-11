@@ -3,17 +3,24 @@
 ### [Project](https://mstypulkowski.github.io/diffusedheads/) | [Paper](https://arxiv.org/abs/2301.03396) | [Demo](https://youtu.be/DSipIDj-5q0)
 Here you can find information about training and evaluation of Diffused Heads. If you want to test our model on CREMA, please switch back to [main](https://github.com/MStypulkowski/diffused-heads/tree/main).
 
-**Note**: No checkpoints or datasets are provided. This code was roughly cleaned and can have bugs. Please raise an issue to open discussion on your problem. We aplogize for the delay in publishing the code.
+**Note**: No checkpoints or datasets are provided. This code was roughly cleaned and can have bugs. Please raise an issue to open discussion on your problem. We apologize for the delay in publishing the code.
+
+## Checkpoints
+CREMA checkpoint can be downloaded [here](https://drive.google.com/file/d/1QiUbnV4MfCYXTtICinDW4Frd_di7xphx/view?usp=sharing). No LRW checkpoint will be provided due to the license.
 
 ## Data
 ### Alignment
 Our model works best on videos with the same alignment. To prepare videos, please use [face processor](https://github.com/DinoMan/face-processor). You can experiment with different offset values.
 
 ### Audio embeddings
-Precompute audio embeddings for your dataset. You are free to use any suitable audio encoder. We used the one from [SDA](https://github.com/DinoMan/speech-driven-animation?tab=readme-ov-file#using-the-encodings). Perhaps a better (and easier) choice is [Whisper Large](https://huggingface.co/openai/whisper-large-v3).
+Precompute audio embeddings for your dataset.
+
+We worked with the one from [SDA](https://github.com/DinoMan/speech-driven-animation?tab=readme-ov-file#using-the-encodings). You can use part of the demo code from [main](https://github.com/MStypulkowski/diffused-heads/tree/main) where a scripted checkpoint is provided.
+
+You are free to use any suitable audio encoder. Perhaps a better (and easier) choice is [Whisper Large](https://huggingface.co/openai/whisper-large-v3). Remember to change the dimension of audio embeddings in the config file, if needed.
 
 ### Folder structure
-The provided dataset class work on predefined `file_list.txt` containing relative paths to video clips. An examples can be found in `datasets/` The data folder should contain subfolders `audio/` and `video/` with separate audio and video files.
+The provided dataset class works on predefined `file_list.txt` containing relative paths to video clips. Examples can be found in `datasets/` The data folder should contain subfolders `audio/` and `video/` with separate audio and video files.
 
 ## Scripts
 To train the model, specify paths and parameters in `./configs/config.yaml`.
