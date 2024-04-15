@@ -42,7 +42,8 @@ python custom_video.py
 The test splits for CREMA and LRW we used can be found in `datasets/`.
 
 Metrics used:
-* FVD and FID: https://github.com/antonibigata/Laughing-Matters
+* FVD: [Laughing Matters repo](https://github.com/antonibigata/Laughing-Matters/blob/6f0296d39ddf624c5b1e71214a311e7273dfb237/src/models/components/modules/metrics.py#L103)
+* FID: [torchmetrics](https://lightning.ai/docs/torchmetrics/stable/image/frechet_inception_distance.html)
 * Blinks/s and Blink duration: https://github.com/DinoMan/blink-detector
 * OFM and F-MSE: `./smoothness_eval.py`
 * AV offset and AV Confidence: https://github.com/joonson/syncnet_python
